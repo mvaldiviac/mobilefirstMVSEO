@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Valdivia · Diseño y Desarrollo Web</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+    <header id="top">
+        <div class="content-header">
+            <div class="logo"><img src="./images/logo-mvseo-blanco.png" alt="MVSeo_" width="180"></div>
+        
+
+        <div class="nav-mobile">
+                <input type="checkbox" id="clickHam">
+                <label  id="burger" for="clickHam">
+                    <div class="menu-mb" >
+                    <span class="barmenu"></span>
+                    <span class="barmenu"></span>
+                    <span class="barmenu"></span>
+
+                    </div>
+                </label>
+                
+                    <label for="clickHam"><div class="lat" id="lat"></div></label>
+                    <div class="menu-mobile">
+                        
+                        <ul class="nav-links">
+                        <li><a id="link-ancla" href="">Inicio (Top)</a></li>
+                        <li><a id="link-ancla" href="#servicios">Servicios</a></li>
+                        <li><a id="link-ancla" href="#proceso">Proceso</a></li>
+                        <li><a id="link-ancla" href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                
+            </div><!-- End .nav-mobile-->
+            </div>
+    </header>
+
+<section class="animacion">
+
+    </section>    
+
+    <main>
+
+    
+
+        <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+        <h1>Diseño y desarrollo web profesional hecho directamente por mí</h1>
+        <p>Creo sitios web modernos, rápidos y pensados para convertir. El SEO lo integro desde el inicio de cada proyecto.</p>
+
+        <a href="#contacto" class="btn-primary">Háblame de tu proyecto</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+
+        <div class="hero-graphic"></div>
+        </div>
+    </section>
+
+<!-- SERVICIOS -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <h2>En qué puedo ayudarte</h2>
+
+      <div class="card card-main">
+        <h3>Diseño Web UX/UI</h3>
+        <p>Diseño interfaces claras, modernas y enfocadas en la experiencia del usuario y la conversión.</p>
+      </div>
+
+      <div class="card card-main">
+        <h3>Desarrollo Web</h3>
+        <p>Desarrollo sitios rápidos y optimizados en HTML, CSS, JavaScript o WordPress, sin código innecesario.</p>
+      </div>
+
+      <div class="card card-secondary">
+        <h3>SEO Estratégico</h3>
+        <p>Integro SEO técnico y on-page desde la estructura del sitio para escalar de forma orgánica.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- PROPUESTA DE VALOR -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2>Por qué trabajar conmigo</h2>
+      <ul class="value-list">
+        <li>Trabajo directo, sin intermediarios</li>
+        <li>Más de 20 años de experiencia real</li>
+        <li>Diseño y desarrollo en una sola visión</li>
+        <li>SEO integrado desde la planificación de la arquitectura</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- PROCESO -->
+  <section id="proceso" class="section">
+    <div class="container">
+      <h2>Cómo trabajo</h2>
+
+      <ol class="process">
+        <li><strong>1.</strong> Análisis del negocio <p>Antes de diseñar, entiendo tu negocio, tus objetivos y a quién quieres llegar. Analizo tu oferta, tu competencia y el contexto digital para definir una base sólida sobre la cual diseñar y desarrollar una web que tenga sentido y genere resultados.</p></li>
+        <li><strong>2.</strong> Diseño UX/UI <p>Diseño la estructura, navegación e interfaz del sitio pensando en el usuario y en los objetivos del negocio. Cada decisión visual y funcional busca facilitar la experiencia, transmitir confianza y guiar a la conversión de forma natural.</p></li>
+        <li><strong>3.</strong> Desarrollo web <p>Desarrollo el sitio con código limpio, rápido y optimizado, cuidando el rendimiento, la compatibilidad y la estabilidad. El resultado es una web funcional, escalable y preparada para crecer sin problemas técnicos.</p></li>
+        <li><strong>4.</strong> Optimización SEO <p>Optimizo la estructura, el contenido y los aspectos técnicos del sitio para facilitar su indexación y visibilidad en buscadores. El SEO se integra de forma natural, sin afectar la experiencia del usuario.</p></li>
+        <li><strong>5.</strong> Escalamiento <p>Una vez publicada la web, analizo su comportamiento y realizo ajustes para mejorar resultados. El objetivo es escalar el proyecto en tráfico, conversiones y rendimiento a medida que el negocio crece.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section cta">
+    <div class="container">
+      <h2>¿Buscas trabajar directamente con quien hará tu web?</h2>
+      <a href="#contacto" class="btn-primary">Conversemos</a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2>Conversemos</h2>
+      <p>Si necesitas contactarme, puedes hacerlo directamente a través de WhatsApp (botón flotante) o, si prefieres una comunicación más formal, mediante este formulario.</p>
+
+      <form class="contact-form" method="post" action="https://hotelesnortesur.cl/email/enviar.php">
+        <input name="nombre" type="text" placeholder="Nombre">
+        <input name="email" type="email" placeholder="Email">
+        <input name="fono" type="text" placeholder="Teléfono">
+        <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto"></textarea>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+
+
+    </main>
+
+
+<footer class="footer">
+  <div class="container">
+    <p>Miguel Valdivia · Diseño & Desarrollo Web</p>
+    <p>© 2026 mvseo.cl</p>
+  </div>
+</footer>
+
+
+
+
+
+
+    </div>
+<div class="top-bottom"> <a href="#top" target="_self">  </a> </div>
+<div class="ws-button">
+    <a href="https://wa.me/56953035872" target="_blank"> LINK</a>
+</div>
+
+
+
+
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
