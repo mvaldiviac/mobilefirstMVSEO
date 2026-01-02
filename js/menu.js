@@ -1,29 +1,19 @@
-// const toggle = document.querySelector('.menu-toggle');
-// const nav = document.querySelector('.mobile-nav');
 
-// toggle.addEventListener('click', () => {
-//   nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.menu-mb');
+  const lat = document.querySelector('#lat');
 
+  if (!menu || !lat) return;
 
-//USO DE MENU
-const menu = document.querySelector('.menu-mb');
-const lat = document.querySelector('#lat');
-const abrirHambur = document.querySelector('#clickHam');
-const linked = document.querySelector('#link-ancla');
+  menu.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('menu-active');
+    lat.classList.toggle('menu-open');
+  });
 
-menu.addEventListener('click',()=>{
-  menu.classList.toggle("active");
-  lat.classList.toggle("cheked");
-})
-lat.addEventListener('click',()=>{
-  lat.classList.toggle("cheked");
-  menu.classList.toggle("active");
-})
-
-linked.addEventListener('click',()=>{
-  lat.classList.toggle("cheked");
-  menu.classList.toggle("active");
-})
-
-
+  lat.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lat.classList.toggle('menu-open');
+    menu.classList.toggle('menu-active');
+  });
+});

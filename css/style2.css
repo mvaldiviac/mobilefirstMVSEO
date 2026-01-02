@@ -1,0 +1,943 @@
+:root {
+  --blue-main: #288AB7;
+  --blue-dark: #002955;
+  --orange: #FF9500;
+  --gray: #B2B2B2;
+  --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    /* border: 1px solid var(--orange); */
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    color: var(--blue-dark);
+    background: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+  
+
+
+.wrapper{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - Slider Home - */
+
+.slider-progress {
+  width: 100%;
+  height: 5px;
+  background: #ffd504;
+  margin: -4px 0 0 0;
+}
+.slider-progress .progress {
+  height: 5px;
+  background: #0f2863;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.progress-animation {
+  animation: progressbar-countdown;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+/*Slider*/
+section.slider-nav-text.slick-initialized.slick-slider{
+    display: none;
+}
+
+
+
+
+/* MENU MOBILE*/
+.nav-mobile{
+  display: block;
+}
+#burger{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 999;
+}
+    .menu-mb{
+        color: var(--blue-main);
+        /* border: 2px solid white; */
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        /* margin: 10px; */
+        justify-content: center;
+        gap: 8px;
+        transition: 300ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .menu-mb .barmenu{
+      height: 3px;
+      width: 40px;
+      background-color: #FFF;
+      border-radius: 5px;
+      transition: 200ms ease-in-out;
+    }
+
+    .menu-mb.active{
+        position: fixed;
+        right: 20px;
+    }
+
+    .menu-mb.active .barmenu:nth-last-child(1){
+      transform: translateY(-11px) rotate(-45deg);
+    }
+    .menu-mb.active .barmenu:nth-last-child(2){
+      opacity: 0;
+    }
+
+    .menu-mb.active .barmenu:nth-last-child(3){
+      transform: translateY(11px) rotate(45deg);
+    }
+
+
+    .menu-mb img{
+        width: 30px;
+        height: 30px;
+    }
+
+    input#clickHam{
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+        display: none;
+      }
+
+      img#hamburg{
+        display: block;
+        transition: 300ms ease-out;
+        transform: rotate(360deg);
+      }
+      img#hamClose{
+        display: none;
+        transition: 300ms ease-out;
+        transform: rotate(360deg);
+      }
+
+
+
+.menu-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: var(--blue-main);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    padding-top: 40px;
+    z-index: 100;
+}
+
+
+
+    input#closer{
+
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+      }
+
+      #clickHam:checked ~ .menu-mobile {
+        transform: translateX(0);
+        }
+      
+      #closer:checked ~ .menu-mobile{
+        display: none;
+      }
+
+
+.cheked{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+
+    ul.nav-links{
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+    ul.nav-links li{
+        text-decoration: none;
+        list-style: none;
+      }
+
+    ul.nav-links li a{
+        color: #FFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        font: normal normal 300 24px/70px "Roboto";
+      }
+
+
+    #navbar.shrink{
+  height: 60px;
+}
+/* FIN MENU MOBILE*/
+
+
+.wrapper main{
+    padding: 0 20px;
+    max-width: 1330px;
+    margin: 0 auto;
+}
+
+.content-header{
+    background-color: var(--blue-dark);
+    height: 60px;
+}
+.logo{
+    padding: 15px;
+}
+.section {
+  padding: 64px 0;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* BOTONES */
+.btn-primary {
+  display: block;
+  width: 100%;
+  background: var(--orange);
+  color: var(--white);
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--blue-main);
+  color: var(--blue-main);
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-services{
+    /* border: 1px solid red; */
+    max-width: 1024px;
+    display: block;
+    margin: 0 auto;
+}
+.content-services h1{
+    font: normal normal 500 38px/40px "Montserrat";
+    width: 100%;
+    text-align: center;
+    /* margin: 0; */
+}
+.content-services .top-services-hotels{
+width: 100%;
+height: 100px;
+background-image: url('../images/top-hotels.png');
+background-position: top right;
+background-size: auto 105px;
+/* border: 1px solid red; */
+text-align: right;
+padding: 0;
+border-radius: 20px 20px 0 0 ;
+}
+.content-services .top-services-events{
+width: 100%;
+height: 100px;
+background-image: url('../images/top-events.png');
+background-position: top right;
+background-size: auto 105px;
+/* border: 1px solid red; */
+text-align: right;
+padding: 0;
+border-radius: 20px 20px 0 0 ;
+}
+.content-services .top-services-transfers{
+width: 100%;
+height: 100px;
+background-image: url('../images/top-transfers.png');
+background-position: top right;
+background-size: auto 105px;
+/* border: 1px solid red; */
+text-align: right;
+padding: 0;
+border-radius: 20px 20px 0 0 ;
+}
+.content-services .services{
+    /* border: 1px solid green; */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 120px;
+    height: auto;
+    min-height: 210px;
+    padding: 30px 50px;
+    border-radius: 0 0 20px 20px;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+.content-services .services-hotels,
+.content-services .services-events,
+.content-services .services-transfers{
+ width: 100%;
+}
+
+
+.content-services .services-hotels{
+    opacity: 0;
+    animation: moveHotel 100ms linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 100%;   /*0% = scroll 0px, 100% = scroll 100px */
+}
+.content-services .services-events{
+    animation: moveEvent 100ms linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 100%; 
+}
+.content-services .services-transfers{
+    animation: moveTransfer 100ms linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 100%; 
+}
+
+
+@keyframes moveHotel {
+  10% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveEvent {
+  28% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  38% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveTransfer {
+  48% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  58% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-services .services.hotels{
+    background-color: #0f2863;
+    background-image: url('../images/bg-hotel.png');
+    background-repeat: no-repeat;
+    background-size:  100%;
+    background-position: top center;
+    color: #FFF;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* font-size: 22px; */
+    font: normal normal 500 22px/35px "Montserrat";
+    width: 100%;
+}
+.content-services .services.hotels h2{
+    font: normal normal 500 30px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.hotels h4{
+    font: normal normal 300 25px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.hotels .ingles{
+    font: normal oblique 300 20px/30px "Montserrat";
+}
+.content-services .services.hotels a{
+    /* padding: 18px 35px; */
+    background-color: #ffd504;
+    color: #0f2863;
+    text-shadow: none;
+    font-style: normal; 
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    /* display: block; */
+    transition: 200ms ease-in-out;
+
+
+  
+
+}
+.content-services .services.hotels a:hover{
+    background-color: #bea10f;
+}
+
+
+
+
+.content-services .services.events{
+    background-color: #ffd504;
+    background-image: url('../images/bg-eventos.png');
+    background-repeat: no-repeat;
+    background-size:  100%;
+    background-position: top center;
+    color: #0f2863;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* font-size: 22px; */
+    font: normal normal 500 22px/35px "Montserrat";
+    width: 100%;
+}
+.content-services .services.events h2{
+    font: normal normal 500 30px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.events h4{
+    font: normal normal 300 25px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.events h4{
+    font: normal normal 300 25px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.events .ingles{
+    font: normal oblique 300 20px/30px "Montserrat";
+}
+.content-services .services.events a{
+    /* padding: 10px 35px; */
+    background-color: #0f2863;
+    color: #ffd504;
+    text-shadow: none;
+    font-style: normal; 
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    /* display: block; */
+    transition: 200ms ease-in-out;
+   
+}
+.content-services .services.events a:hover{
+    background-color: #bea10f;
+}
+
+
+
+
+.content-services .services.transfers{
+    background-color: #ccc;
+    background-image: url('../images/bg-traslados.png');
+    background-repeat: no-repeat;
+    background-size:  100%;
+    background-position: top center;
+    color: #0f2863;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* font-size: 22px; */
+    font: normal normal 500 22px/35px "Montserrat";
+    width: 100%;
+}
+.content-services .services.transfers h2{
+    font: normal normal 500 30px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.transfers h4{
+    font: normal normal 300 25px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.transfers h4{
+    font: normal normal 300 25px/30px "Montserrat";
+    margin: 0;
+}
+.content-services .services.transfers .ingles{
+    font: normal oblique 300 20px/30px "Montserrat";
+}
+.content-services .services.transfers a{
+    /* padding: 10px 35px; */
+    background-color: #646464;
+    color: #ffffff;
+    text-shadow: none;
+    font-style: normal; 
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    /* display: block; */
+    transition: 200ms ease-in-out;
+}
+.content-services .services.transfers a:hover{
+    background-color: #bea10f;
+}
+
+.content-services .services.hotels a.btn-cta,
+.content-services .services.events a.btn-cta,
+.content-services .services.transfers a.btn-cta{
+    /* height: 20px; */
+    display: block;
+    padding: 15px;
+}
+
+
+
+
+footer{
+    background-image: url('../images/mundo.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000D5E;
+    padding: 100px 0 80px 0;
+    height: 450px;
+    color: #FFF;
+    text-align: center;
+    
+}
+footer .icono{
+    position: relative;
+    top: -40px;
+    left: -400px;
+    opacity: 0.25;
+}
+footer .texto{
+    position: relative;
+    top: -430px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    padding: 0 20px;
+}
+footer .texto h4{
+    font-style: italic;
+}
+footer .texto a.reservation{
+    background-color: #ffd504;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font: normal normal 500 25px/30px "Montserrat";
+    /* margin-bottom: 10px; */
+}
+footer .texto .sub-text{
+    font: normal oblique 300 16px/30px "Montserrat";
+    /* margin-top: 10px; */
+    display: block;
+    margin-bottom: 20px;
+}
+footer .texto .name-executive{
+    font: normal oblique 400 20px/30px "Montserrat";
+    margin-bottom: 20px;
+}
+
+.subfooter{
+    background-color: #01083a;
+    text-align: center;
+}
+.subfooter .credits{
+    font-size: 12px;
+    font-family: "Roboto";
+    color: #475bdd;
+    position: relative;
+    height: 60px;
+    padding-top: 20px;
+    /* top: 120px; */
+}
+.subfooter .credits a{
+    color: #6878df;
+}
+
+
+
+
+.container-email {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+}
+
+.container-email h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-email input, .container-email select, .container-email textarea {
+    width: 100%;
+    padding: 5px 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    display: block;
+    box-sizing: border-box;
+    font: normal 400 16px/30px "Montserrat";
+}
+.container-email textarea{
+    height: 200px;
+}
+.container-email button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container-email button:hover {
+    background: #0056b3;
+}
+
+.wrapper .logo img.dkt{ 
+        display: block;
+    }
+    .wrapper .logo img.mb{ 
+        display: none; 
+        margin: 0 auto;
+    }
+
+.img-round{
+    width: 100%;
+}
+
+.section-service{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    /* border: 1px solid green; */
+    padding: 0 20px;
+}
+.servicios-logisticos{
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1024px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    box-sizing: border-box;
+    background-color: #0f2863;
+    border-radius: 20px;
+    background-image: url('../images/mundo.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.servicios-logisticos h1{
+    margin: 0 auto 60px auto;
+    font: normal 500 30px/40px "Montserrat";
+    color: #FFF;
+}
+.servicios-logisticos ul{
+    padding: 0;
+}
+.servicios-logisticos ul li{
+    text-decoration: none;
+    list-style: none;
+    font: normal 400 16px/40px "Montserrat";
+    color: #FFF;
+}
+/* .serv span.check-list{
+
+    display: block;
+
+} */
+.footer-text{
+    font: normal 400 14px/40px "Montserrat";
+}
+
+
+
+
+
+
+ @media (max-width: 1024px){
+
+    
+
+    .navin{
+        display: flex;
+        top: 123px;
+        right: 0;
+        left: 0;
+        /* border: 1px solid red; */
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+        background-color: #0f2863;
+    }
+    .navin div{
+        text-align: center;
+        margin: 10px 0;
+    }
+    .navin div a{
+            font: normal 500 20px / 30px "Montserrat";
+            margin: 0;
+            padding: 0;
+    }
+    .datos-contacto{
+        display: none;
+    }
+    .wrapper{
+        overflow: visible;
+        box-sizing: content-box;
+
+    }
+    .bd-azul, 
+    .bd-amarillo, 
+    .wrapper .logo{
+        position: inherit !important;
+        margin: 0 auto;
+        display: block;
+        width: auto;
+    }
+    .wrapper .logo img.dkt{ 
+        display: none;
+    }
+    .wrapper .logo img.mb{ 
+        display: block; 
+        margin: 0 auto;
+    }
+    .nav-mobile{
+    display: block;
+    }
+    .wrapper .content{
+        display: block;
+        top: 190px;
+    }
+    .wrapper .content a.cta-home{
+        font-size: 23px;
+        box-shadow: none;
+        font-weight: 500;
+    }
+    .content-services{
+
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .content-services .services.hotels,
+    .content-services .services.events,
+    .content-services .services.transfers{
+    background-size: auto 100% !important;
+    
+    }
+    footer .texto .name-executive {
+        font: normal oblique 400 14px / 30px "Montserrat";
+        margin-bottom: 20px;
+    }
+    .content-services .services-hotels .espanol,
+    .content-services .services-events .espanol,
+    .content-services .services-transfers .espanol{
+        font: normal 400 14px / 30px "Montserrat" !important;
+    }
+    .content-services .services-hotels .ingles,
+    .content-services .services-events .ingles,
+    .content-services .services-transfers .ingles{
+        font: oblique 400 14px / 30px "Montserrat" !important;
+    }
+    .container-email{
+        border: none;
+        box-shadow: none;
+    }
+
+
+    /* .slider-wrapper .regular.slider div img{
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+    } */
+     .img-round{
+    width: auto;
+}
+    .servicios-logistico {
+        margin: 0 20px;
+        width: auto;
+    }
+}
